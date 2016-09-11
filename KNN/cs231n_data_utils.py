@@ -26,7 +26,7 @@ def load_CIFAR10(ROOT):
 		X, Y = load_CIFAR_batch(f)
 		temp_x.append(X)
 		temp_y.append(Y)
-	# Training data
+	# Load training data
 	Xtr = np.concatenate(temp_x)
 	Ytr = np.concatenate(temp_y)
 	Xte, Yte = load_CIFAR_batch(os.path.join(ROOT, 'test_batch'))
