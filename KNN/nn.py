@@ -17,6 +17,7 @@ class NearestNeighbor(object):
 
 		# loop over all rows
 		for i in xrange(num):
+			# Minus every rows in X training data
 			distances = np.sum(np.abs(self.Xtr-Xte[i,:]), axis=1)
 			min_index = np.argmin(distances)
 			Ypre[i] = self.ytr[min_index]
