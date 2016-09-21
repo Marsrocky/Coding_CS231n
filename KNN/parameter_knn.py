@@ -35,5 +35,6 @@ max_acc = 0
 for i in validation_accuracies:
 	if i[1] > max_acc:
 		proper_k = k
+		max_acc = i[i]
 
 print 'Optimization k = %d' % proper_k
