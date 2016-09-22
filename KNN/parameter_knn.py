@@ -5,6 +5,7 @@ import os
 import numpy as np
 from cs231n_data_utils import *
 from nn import *
+import time
 
 path = os.path.dirname(os.path.dirname(os.getcwd())) + '/cifar-10-batches-py/'
 
@@ -17,6 +18,8 @@ Xval_rows = Xtr_rows[:1000, :]
 Yval = Ytr[:1000]
 Xtr_rows = Xtr_rows[1000:, :]
 Ytr = Ytr[1000:]
+
+start_time = time.time()
 
 # find hyperparameters that work best
 validation_accuracies = []
@@ -37,4 +40,7 @@ for i in validation_accuracies:
 		proper_k = k
 		max_acc = i[i]
 
+end_time = time.time()
+
 print 'Optimization k = %d' % proper_k
+print 'Time Consumption t = ', end_time - start_time, 's'
