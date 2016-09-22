@@ -3,8 +3,8 @@
 File structure:  
 -- Cifar  
 -- Coding_CS231n  
-  -- KNN  
-  -- ...  
+>-- KNN  
+>-- ...  
   
 Python libs: numpy, scipy, matplotlib.pyplot  
   
